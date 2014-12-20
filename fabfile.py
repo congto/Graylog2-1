@@ -114,10 +114,10 @@ def src_get():
     sudo('wget --directory-prefix=/opt '
          'http://packages.graylog2.org/releases/graylog2-web-interface/graylog2-web-interface-0.90.0.tgz')
     with cd('/opt'):
-        #print(green('Extracting The Tarball ...'))
-        #sudo('tar zxvf {0}'.format(graylog2_pkg))
-        #sudo('tar zxvf {0}'.format(grayweb_pkg))
-        #time.sleep(2)
+        print(green('Extracting The Tarball ...'))
+        sudo('tar zxvf {0}'.format(graylog2_pkg))
+        sudo('tar zxvf {0}'.format(grayweb_pkg))
+        time.sleep(2)
         print(green('Installing Elastic Search ...'))
         sudo('dpkg -i {0}'.format(elasticsearch_pkg))
         print(green('Creating The necessary Symbolic Links ...'))
